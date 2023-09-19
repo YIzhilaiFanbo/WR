@@ -1,1 +1,35 @@
+#include<iostream>
+#include<cmath>
+using namespace std;
+
+//求最大素数因子
+int getMaxFactor(int num) {
+    int n = num;
+    for (int i = 2; i <= sqrt(num); i++) {
+        while (n % i == 0 && n != i) {
+            n /= i;
+        }
+    }
+    return n;
+}
+
+int main() {
+    int n;
+    int max = 0;
+    int f;
+    int result = 0;
+    cin >> n;
+    //记录下当前最大素数因子及该整数，读入新整数后计算其最大素数因子后比较并进行更新，最终得到具有最大素数因子的整数
+    for (int i = 0; i < n; i++) {
+        int m;
+        cin >> m;
+        f = getMaxFactor(m);
+        if (f > max) {
+            max = f;
+            result = m;
+        }
+    }
+    cout << result;
+    return 0;
+}
 
