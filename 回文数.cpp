@@ -5,11 +5,11 @@ class Solution {
 
 public:
     Solution();
-    bool isPalindrome(int x);//ÅĞ¶Ï»ØÎÄÊı·½·¨
+    bool isPalindrome(int x);//åˆ¤æ–­å›æ–‡æ•°æ–¹æ³•
 
 };
 Solution::Solution() {}
-//µ±ÊäÈëÎª¸ºÊ±·µ»Ø0£»µ±ÊäÈë²»Îª¸ºÊ±£¬½«ÊäÈëÄæĞòºóÓëÔ­Êı±È½Ï£¬ÈôÏàµÈ±ãÊä³ö1£¬²»µÈ±ãÊä³ö0
+//å½“è¾“å…¥ä¸ºè´Ÿæ—¶è¿”å›0ï¼›å½“è¾“å…¥ä¸ä¸ºè´Ÿæ—¶ï¼Œå°†è¾“å…¥é€†åºåä¸åŸæ•°æ¯”è¾ƒï¼Œè‹¥ç›¸ç­‰ä¾¿è¾“å‡º1ï¼Œä¸ç­‰ä¾¿è¾“å‡º0
 bool Solution::isPalindrome(int num) {
     if (num < 0) {
         return false;
@@ -29,7 +29,6 @@ bool Solution::isPalindrome(int num) {
 }
 int main() {
     int n;
-    freopen("in.txt", "r", stdin);
     cin >> n;
     Solution s;
     cout << s.isPalindrome(n);
